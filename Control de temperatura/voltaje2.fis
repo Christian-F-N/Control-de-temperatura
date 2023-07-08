@@ -1,0 +1,69 @@
+[System]
+Name='voltaje2'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=25
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='mom'
+
+[Input1]
+Name='Error'
+Range=[0 1023]
+NumMFs=5
+MF1='ENG':'trimf',[0 127 255]
+MF2='ENP':'trimf',[192 319 446]
+MF3='N':'trimf',[384 511 638]
+MF4='EPP':'trimf',[576 703 830]
+MF5='EPG':'trimf',[769 897 1023]
+
+[Input2]
+Name='VariableE'
+Range=[0 1023]
+NumMFs=5
+MF1='ENG':'trimf',[0 127 254]
+MF2='N':'trimf',[384 511 638]
+MF3='EPG':'trimf',[769 897 1023]
+MF4='ENP':'trimf',[192 319 446]
+MF5='EPP':'trimf',[576 703 830]
+
+[Output1]
+Name='voltaje'
+Range=[0 1023]
+NumMFs=5
+MF1='VMP':'trimf',[0 127 254]
+MF2='VM':'trimf',[384 511 638]
+MF3='VMG':'trimf',[769 897 1023]
+MF4='VP':'trimf',[192 319 446]
+MF5='VG':'trimf',[576 703 830]
+
+[Rules]
+1 1, 1 (1) : 1
+1 4, 1 (1) : 1
+1 2, 1 (1) : 1
+1 5, 3 (1) : 1
+1 3, 3 (1) : 1
+2 1, 1 (1) : 1
+2 4, 1 (1) : 1
+2 2, 1 (1) : 1
+2 5, 5 (1) : 1
+2 3, 5 (1) : 1
+3 1, 1 (1) : 1
+3 4, 1 (1) : 1
+3 2, 1 (1) : 1
+3 5, 2 (1) : 1
+3 3, 2 (1) : 1
+4 1, 1 (1) : 1
+4 4, 1 (1) : 1
+4 2, 1 (1) : 1
+4 3, 5 (1) : 1
+4 5, 5 (1) : 1
+5 1, 1 (1) : 1
+5 4, 1 (1) : 1
+5 2, 1 (1) : 1
+5 5, 3 (1) : 1
+5 3, 3 (1) : 1

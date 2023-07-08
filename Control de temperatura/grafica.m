@@ -1,0 +1,10 @@
+clc;
+close all;
+clear;
+x=-1:0.1:1;
+f_x=1./(1+exp(-5*x));
+plot(f_x);
+hold on;
+f_x_10=1./(1+exp(-10*x));
+plot(f_x_10);
+hold off;
