@@ -23,10 +23,7 @@ A continuación se muestra el diagrama de conexiones entre el sensor de temperat
       |          +-----------+
       |+---------|---------+
       | Sensor | || de Temp.| Arduino |+---------|---------+|
-| +-----------++----------| Luces LED |+-----------++-------------------+
-      |      Display      |
-      +-------------------+
-
+| +-----------++----------| Luces LED |+-----------++-------------------+|      Display      |+-------------------+
 ## Pasos de Implementación
 
 1. **Configuración del hardware**: Conecta el sensor de temperatura, el motor, las luces LED y el display a las salidas correspondientes en Arduino según el diagrama de conexiones.
